@@ -62,3 +62,62 @@ smallimg[2].onclick = function(){
 smallimg[3].onclick = function(){
   MainImg.src = smallimg[3].src;
 }
+
+// cart
+// document.addEventListener('DOMContentLoaded', function () {
+//   const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+//   addToCartButtons.forEach(button => {
+//       button.addEventListener('click', function (event) {
+//           event.preventDefault();
+
+//           const product = button.closest('.product');
+//           const productName = product.querySelector('.description h3').textContent;
+//           const productImage = product.querySelector('img').src;
+
+//           addToCart(productName, productImage);
+//       });
+//   });
+
+//   function addToCart(name, image) {
+//       const cartItemsContainer = document.getElementById('cart-items');
+
+//       const cartItem = document.createElement('div');
+//       cartItem.classList.add('cart-item');
+
+//       const imageElement = document.createElement('img');
+//       imageElement.src = image;
+//       imageElement.alt = name;
+//       cartItem.appendChild(imageElement);
+
+//       const nameElement = document.createElement('h3');
+//       nameElement.textContent = name;
+//       cartItem.appendChild(nameElement);
+
+//       cartItemsContainer.appendChild(cartItem);
+//   }
+// });
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Function to add a product to the cart
+  function addToCart(name, image, price) {
+      const cartItemsContainer = document.getElementById('cart-items');
+
+      // Create a new row for the product
+      const cartItem = document.createElement('tr');
+      cartItem.innerHTML = `
+          <td><img src="${image}" alt="${name}"></td>
+          <td>${name}</td>
+          <td>${price}</td>
+          <td>1</td>
+          <td>${price}</td>
+          <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+      `;
+
+      // Append the new row to the cart
+      cartItemsContainer.appendChild(cartItem);
+  }
+
+  // Example: Adding a product to the cart
+  addToCart("Product Name", "product_image.jpg", "$100.00");
+});
