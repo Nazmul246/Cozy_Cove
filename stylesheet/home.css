@@ -25,6 +25,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 20px 80px;
     background-color: #DCB579;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
@@ -54,8 +55,8 @@ body{
 
   #navbar {
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
+    align-items: center;
+    justify-content: center;
     font-family: "Raleway", sans-serif;
     /* font-weight: 00; */
   }
@@ -196,6 +197,20 @@ body{
   padding: 40px;
 }
 
+.feature-box button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: font-size 0.3s ease;
+}
+
+.feature-box button:hover{
+  /* box-shadow: 10px 10px 54px #b61010; */
+  color: #558e60;
+  font-size: 15px;
+  font-weight: 700;
+}
+
 #feature .feature-box{
   width: 300px;
   text-align: center;
@@ -204,6 +219,7 @@ body{
   border: 1px solid #cce7d0;
   border-radius: 4px;
   margin: 15px 0;
+  transition: box-shadow 0.3s ease;
 }
 
 #feature .feature-box:hover{
@@ -259,7 +275,7 @@ body{
   cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
   margin: 15px 0;
-  transition: 0.2s ease;
+  transition: 0.3s ease;
   position: relative;
 }
 
@@ -373,14 +389,14 @@ footer a{
 #nw-banner .banner-box{
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
-  padding: 20px;
   background-image: url(../img/bedC2.jpg);
-  min-width: 320px;
+  min-width: 300px;
+  margin: 20px;
   height: 250px;
   background-size: cover;
   background-position: center;
+  padding: 10px 12px;
 }
 
 #nw-banner .banner-box2{
@@ -832,120 +848,6 @@ a {
   margin: 0 40px 0 0;
 }
 
-/* cart */
-
-#cart{
-  overflow-x: auto;
-}
-
-#cart{
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-  white-space: nowrap;
-}
-
-#cart table img{
-  width: 70px;
-}
-
-#cart table td:nth-child(6){
-  width: 100px;
-  text-align: center;
-}
-
-#cart table td:nth-child(1){
-  width: 150px;
-  text-align: center;
-}
-
-#cart table td:nth-child(2){
-  width: 250px;
-  text-align: center;
-}
-
-#cart table td:nth-child(3),
-#cart table td:nth-child(4),
-#cart table td:nth-child(5){
-  width: 150px;
-  text-align: center;
-}
-
-#cart table td:nth-child(4) input{
-  width: 70px;
-  padding: 10px 5px 10px 15px;
-}
-
-#cart table thead td{
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 13px;
-  padding: 18px 0;
-}
-
-#cart table tbody tr td{
-  padding-top: 15px;
-}
-
-#cart table tbody td{
-  font-size: 15px;
-}
-
-#cart-add{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-#coupon{
-  width: 50%;
-  margin-bottom: 30px;
-  padding-left: 100px;
-}
-
-#coupon h3,
-#subtotal h3{
-  padding-bottom: 15px;
-}
-
-#coupon input{
-  padding: 10px 20px;
-  outline: none;
-  width: 50%;
-  margin-right: 10px;
-  border: 1px solid #e2e9e1;
-}
-
-#coupon button,
-#subtotal button{
-  background-color: rgb(45, 135, 253);
-  color: white;
-  padding: 10px 20px;
-  cursor: pointer;
-  border: none;
-}
-
-#subtotal{
-  width: 30%;
-  margin-bottom: 30px;
-  border: 1px solid #e2e9e1;
-  background-color: white;
-  padding: 30px;
-}
-
-#subtotal table{
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-#subtotal table td{
-  width: 50%;
-  border: 1px solid #e2e9e1;
-  padding: 10px;
-  font-size: 13px;
-}
-
 @media (max-width: 1024px) {
   .responsive-container-block.Container {
     max-width: 850px;
@@ -996,8 +898,7 @@ a {
   }
 }
 
-@media (max-width: 799px) {
-
+@media (max-width: 768px) {
   .mainImg {
     width: 90%;
   }
@@ -1058,6 +959,16 @@ a {
 
   .allText.bottomText {
     margin: 40px 0 0 0;
+  }
+
+  /* homepage banner */
+  #nw-banner .banner-box{
+    margin-left: 70px;
+  }
+
+  /* homepage feature section */
+  #feature{
+    margin-left: 30px;
   }
 }
 
